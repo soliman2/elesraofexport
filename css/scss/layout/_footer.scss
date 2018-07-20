@@ -1,0 +1,131 @@
+@import "helpers/variables.scss";
+
+footer {
+    padding: 40px 0;
+    background-color: #292929;
+    @media (max-width: $lg) {
+        text-align: center;
+    }
+    div[class*="col"] {
+        @media (max-width: $sm) {
+            margin-bottom: 40px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+
+        }
+    }
+    h2 {
+        font-size: 18px;
+        color: #fff;
+        font-weight: 500;
+        margin-bottom: 25px;
+    }
+    p {
+        color: #fff;
+        line-height: 26px;
+        font-size: 16px;
+    }
+    ul {
+
+        list-style: none;
+        li {
+            padding: 6px 0;
+            color: #fff;
+            a {
+                color: #fff;
+                @extend %transition;
+                font-size: 16px;
+
+                &:hover {
+                    color: $redColor;
+                }
+            }
+        }
+    }
+
+}
+
+.social_media {
+    line-height: 33px;
+    display: flex;
+    justify-content: center;
+    li {
+        display: inline-block;
+        padding: 0 3px;
+        a {
+            height: 30px;
+            width: 30px;
+            line-height: 30px;
+            text-align: center;
+            border-radius: 100%;
+            background-color: #ccc;
+            @extend %transition;
+            font-size: 14px;
+            &:hover {
+                background-color: $redColor;
+                color: #fff;
+            }
+        }
+    }
+}
+
+/***Start Button Go Up**/
+
+.go_up {
+    position: fixed;
+    z-index: 999;
+    bottom: 30px;
+    left: 30px;
+    background-color: $redColor;
+    height: 30px;
+    width: 30px;
+    line-height: 35px;
+    text-align: center;
+    border-radius: 2px;
+    color: #fff;
+    @extend %transition;
+    cursor: pointer;
+    @media (max-width: $md) {
+        left: 15px
+    }
+    &:hover {
+        box-shadow: 0 0 5px #fff;
+        background-color: $greenColor;
+    }
+
+
+}
+
+/**Start Copyright Section**/
+
+.copyright {
+    padding: 10px 0;
+    background-color: #303030;
+    .copyright_content {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        @media (max-width: $md) {
+            display: block;
+            text-align: center;
+
+        }
+
+        span {
+            color: #fff;
+            font-size: 14px;
+            margin: 5px 0;
+            display: block;
+        }
+        a {
+            color: #fff;
+            @extent %transition;
+            &:hover {
+                color: $redColor;
+            }
+        }
+    }
+}
+
+/**End Copyright Section**/
